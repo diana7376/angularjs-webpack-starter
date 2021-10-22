@@ -4,6 +4,11 @@
 import './polyfills';
 import './vendor';
 
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+
 /**
  * Import the global styles
  */
@@ -18,7 +23,7 @@ import * as angular from 'angular';
 /**
  *  Import module to be bootstrapped
  */
-import { moduleName as appModule } from './app/app.module';
+import { moduleName as appModule } from './app/app';
 
 /**
  * Bootstrap the application using the imported moduleName

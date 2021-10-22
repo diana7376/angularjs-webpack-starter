@@ -29,6 +29,7 @@
   "author": "Frederik Prijck <frederik.prijck@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@types/angular": "^1.7.3",
     "@types/angular-mocks": "^1.7.0",
     "@types/angular-ui-router": "^1.1.40",

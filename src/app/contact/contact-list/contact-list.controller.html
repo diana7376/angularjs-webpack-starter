@@ -1,0 +1,14 @@
+<div class="contact-page">
+
+  <h1>Contacts</h1>
+
+  <div class="contact-list" ng-repeat="contact in vm.contacts">
+    <span>{{ contact.firstName }} {{ contact.lastName }}</span>
+    <button type="button" class="pull-right button-icon" ng-click="vm.remove(contact.id)">
+      <i class=" fas fa-trash-alt"></i>
+    </button>
+  </div>
+
+  <a class="btn btn-primary btn-block" ui-sref="add-contact">Add</a>
+
+</div>
