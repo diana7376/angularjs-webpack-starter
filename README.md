@@ -31,7 +31,7 @@ https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free
 To use this starter you can simply clone it to your prefered location by using
 
 ```
- git clone https://github.com/frederikprijck/angularjs-webpack-starter.git <directory_name> --depth=1
+ git clone git@github.com:Systaro/angularjs-webpack-starter.git <directory_name> --depth=1
  cd <directory_name>
 ```
 
