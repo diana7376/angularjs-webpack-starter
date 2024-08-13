@@ -1,25 +1,24 @@
-declare const angular;
-declare const require;
+import { StateProvider, UrlRouterProvider } from '@uirouter/angularjs';
+import { ChefsController } from './chefs/chefs.controller';
+import { RecipeController } from './recipe/recipe.controller';
 
-export const contactRoutingConfig = angular.module('contactRoutingConfig', [])
-    .config(Config);
+export default function contactRoutes($stateProvider: StateProvider, $urlRouterProvider: UrlRouterProvider) {
+  $stateProvider
+    .state('chefs', {
+      url: '/chefs',
+      templateUrl: 'app/contact/chefs/chefs.controller.html',
+      controller: ChefsController,
+      controllerAs: 'ctrl'
+    })
+    .state('recipes', {
+      url: '/recipes',
+      templateUrl: 'app/contact/recipe/recipe.controller.html',
+      controller: RecipeController,
+      controllerAs: 'ctrl'
+    });
 
-export default contactRoutingConfig.name;
-
-
-Config.$inject = ['$stateProvider'];
-function Config($stateProvider){
-    $stateProvider
-      .state('add-contact', {
-        url: '/contacts/add',
-        template: require('./contact-form/contact-form.controller.html'),
-        controller: 'contactFormController as vm'
-      })
-
-      .state('contacts', {
-        url: '/contacts',
-        template: require('./contact-list/contact-list.controller.html'),
-        controller: 'contactListController as vm'
-      });
+  // Default route
+  $urlRouterProvider.otherwise('/chefs');
 }
 
+contactRoutes.$inject = ['$stateProvider', '$urlRouterProvider'];

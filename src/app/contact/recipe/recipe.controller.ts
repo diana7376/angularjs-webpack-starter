@@ -1,15 +1,15 @@
 declare const angular;
-import './contact-form.styles.scss';
+import './recipe.styles.scss';
 
 
 export const contactFormControllerModule = angular.module('contactFormControllerModule', [])
-  .controller('contactFormController', ContactFormController);
+  .controller('contactFormController', RecipeController);
 
 export default contactFormControllerModule.name;
 
 
-ContactFormController.$inject = ['$scope', 'ContactService', '$state'];
-function ContactFormController($scope, ContactService, $state){
+RecipeController.$inject = ['$scope', 'ContactService', '$state'];
+export function RecipeController($scope, ContactService, $state){
   let vm = this;
   vm.lastName = null;
   vm.firstName = null;
@@ -23,6 +23,6 @@ function ContactFormController($scope, ContactService, $state){
     vm.lastName = '';
     vm.firstName = '';
 
-    $state.go('contacts');
+    $state.go('chefs');
   }
 }

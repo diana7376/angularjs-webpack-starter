@@ -16,7 +16,8 @@
     "allowJs": true,
     "types": [
       "angular"
-    ]
+    ],
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "out",

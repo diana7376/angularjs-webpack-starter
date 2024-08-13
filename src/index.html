@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="application.bootstrap">
+<html lang="en" ng-app="application">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-   <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecipeCentre</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
-
 <body>
-  <div class="app" ui-view></div>
+<div class="app" ui-view></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="index.spec.js"></script>
 </body>
 </html>

@@ -4,13 +4,18 @@ const ROOT = path.resolve( __dirname, 'src' );
 /**
  * Webpack Plugins
  */
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
+    entry: './index.ts',
     context: ROOT,
-
+    output: {
+      filename: 'index.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
     resolve: {
         extensions: ['.ts', '.js']
     },
@@ -88,5 +93,5 @@ module.exports = {
         new ExtractTextPlugin('css/style.css')
     ],
 
-    entry: './index.ts'
+    // entry: './index.ts'
 };

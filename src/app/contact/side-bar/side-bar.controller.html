@@ -1,0 +1,31 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="side-bar.styles.css">
+</head>
+
+<body ng-controller="SideNavController as ctrl">
+
+<div id="mySidenav" class="sidenav">
+  <div class="logo-container">
+    <i class="fas fa-utensils"></i>
+    <span>RecipeCentre</span>
+  </div>
+
+  <a ui-sref="chefs" ui-sref-active="active"><i class="fas fa-hat-cowboy"></i> Chefs</a>
+  <a ui-sref="recipes" ui-sref-active="active"><i class="fas fa-book-open"></i> Recipes</a>
+</div>
+
+<div id="main">
+  <div ui-view></div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="side-bar.controller.js"></script>
+</body>
+
+
+
+
+
+
